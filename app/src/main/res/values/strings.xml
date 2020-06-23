@@ -9,5 +9,6 @@
     <string name="name_label">Name</string>
     <string name="bio_label">Your Passion</string>
     <string name="explore">EXPLORE NOW</string>
+    <string name="loading_state">Loading...</string>
 
 </resources>
