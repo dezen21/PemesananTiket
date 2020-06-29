@@ -10,5 +10,6 @@
     <string name="bio_label">Your Passion</string>
     <string name="explore">EXPLORE NOW</string>
     <string name="loading_state">Loading...</string>
+    <string name="no_photo_url"><![CDATA[https://firebasestorage.googleapis.com/v0/b/fir-androidstudio-6b040.appspot.com/o/res%2Ficon_nopic.png?alt=media&token=74230a1c-0ce1-455c-8b5e-9ad083708842]]></string>
 
 </resources>
