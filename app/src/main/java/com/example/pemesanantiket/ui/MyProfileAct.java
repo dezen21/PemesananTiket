@@ -1,4 +1,4 @@
-package com.example.pemesanantiket;
+package com.example.pemesanantiket.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.pemesanantiket.model.MyTicket;
+import com.example.pemesanantiket.R;
+import com.example.pemesanantiket.adapter.TicketAdapter;
+import com.example.pemesanantiket.model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MyProfileAct extends AppCompatActivity {
 
@@ -63,9 +68,15 @@ public class MyProfileAct extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
-                bio.setText(dataSnapshot.child("bio").getValue().toString());
-                Picasso.with(MyProfileAct.this).load(dataSnapshot.child("url_photo_profile").getValue().toString()).centerCrop().fit().into(photo_profile);
+
+                User user = dataSnapshot.getValue(User.class);
+                assert user != null;
+                nama_lengkap.setText(user.getName());
+                bio.setText(user.getBio());
+
+                String photoUrl = (!Objects.requireNonNull(user.getUrlPhoto()).isEmpty())?
+                        user.getUrlPhoto() : getString(R.string.no_photo_url);
+                Picasso.get().load(photoUrl).centerCrop().fit().into(photo_profile);
 
             }
 
@@ -76,12 +87,9 @@ public class MyProfileAct extends AppCompatActivity {
         });
 
 
-        btn_edit_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoeditprofile = new Intent (MyProfileAct.this,EditProfileAct.class);
-                startActivity(gotoeditprofile);
-            }
+        btn_edit_profile.setOnClickListener(v -> {
+            Intent gotoeditprofile = new Intent (MyProfileAct.this,EditProfileAct.class);
+            startActivity(gotoeditprofile);
         });
 
         reference2 = FirebaseDatabase.getInstance().getReference().child("MyTickets").child(username_key_new);
@@ -102,26 +110,18 @@ public class MyProfileAct extends AppCompatActivity {
             }
         });
 
-        btn_back_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        btn_sign_out.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //menghapus value dari username local
-                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(username_key, null);
-                editor.apply();
+        btn_back_home.setOnClickListener(v -> finish());
+        btn_sign_out.setOnClickListener(v -> {
+            //menghapus value dari username local
+            SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(username_key, null);
+            editor.apply();
 
-                //pindah act
-                Intent gotosignin = new Intent (MyProfileAct.this,SignInAct.class);
-                startActivity(gotosignin);
-                finish();
-            }
+            //pindah act
+            Intent gotosignin = new Intent (MyProfileAct.this,SignInAct.class);
+            startActivity(gotosignin);
+            finish();
         });
     }
 

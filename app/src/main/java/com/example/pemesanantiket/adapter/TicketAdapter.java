@@ -1,4 +1,4 @@
-package com.example.pemesanantiket;
+package com.example.pemesanantiket.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.pemesanantiket.R;
+import com.example.pemesanantiket.model.MyTicket;
+import com.example.pemesanantiket.ui.MyTicketDetailAct;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;

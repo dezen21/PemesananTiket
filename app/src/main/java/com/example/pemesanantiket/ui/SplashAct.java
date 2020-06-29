@@ -1,4 +1,4 @@
-package com.example.pemesanantiket;
+package com.example.pemesanantiket.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.pemesanantiket.R;
 
 public class SplashAct extends AppCompatActivity {
 
@@ -51,9 +53,8 @@ public class SplashAct extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-
                     //merubah activity
-                    Intent gogetstarted = new Intent(SplashAct.this,GetStarted.class);
+                    Intent gogetstarted = new Intent(SplashAct.this, GetStarted.class);
                     startActivity(gogetstarted);
                     finish();
                 }

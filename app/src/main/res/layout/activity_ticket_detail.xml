@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".TicketDetailAct">
+    tools:context=".ui.TicketDetailAct">
 
     <ImageView
         android:id="@+id/header_ticket_detail"

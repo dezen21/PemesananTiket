@@ -1,4 +1,4 @@
-package com.example.pemesanantiket;
+package com.example.pemesanantiket.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.pemesanantiket.R;
 
 public class GetStarted extends AppCompatActivity {
 
@@ -42,7 +44,7 @@ public class GetStarted extends AppCompatActivity {
         btn_sign_in.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent gotosign = new Intent(GetStarted.this,SignInAct.class);
+                Intent gotosign = new Intent(GetStarted.this, SignInAct.class);
                 startActivity(gotosign);
             }
         });
@@ -50,7 +52,7 @@ public class GetStarted extends AppCompatActivity {
         btn_new_account_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoregisterone = new Intent(GetStarted.this,RegisterOneAct.class);
+                Intent gotoregisterone = new Intent(GetStarted.this, RegisterOneAct.class);
                 startActivity(gotoregisterone);
             }
         });

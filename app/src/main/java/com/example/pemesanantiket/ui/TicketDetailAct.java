@@ -1,7 +1,4 @@
-package com.example.pemesanantiket;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.pemesanantiket.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.pemesanantiket.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,7 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TicketDetailAct extends AppCompatActivity {
 
@@ -36,15 +34,15 @@ public class TicketDetailAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ticket_detail);
 
-        btn_buy_ticket          = findViewById(R.id.btn_buy_ticket);
-        header_ticket_detail    = findViewById(R.id.header_ticket_detail);
-        btn_back                = findViewById(R.id.btn_back);
-        title_ticket            = findViewById(R.id.title_ticket);
-        location_ticket         = findViewById(R.id.location_ticket);
-        photo_spot_ticket       = findViewById(R.id.photo_spot_ticket);
-        wifi_ticket             = findViewById(R.id.wifi_ticket);
-        festival_ticket         = findViewById(R.id.festival_ticket);
-        short_desc_ticket       = findViewById(R.id.short_desc_ticket);
+        btn_buy_ticket = findViewById(R.id.btn_buy_ticket);
+        header_ticket_detail = findViewById(R.id.header_ticket_detail);
+        btn_back = findViewById(R.id.btn_back);
+        title_ticket = findViewById(R.id.title_ticket);
+        location_ticket = findViewById(R.id.location_ticket);
+        photo_spot_ticket = findViewById(R.id.photo_spot_ticket);
+        wifi_ticket = findViewById(R.id.wifi_ticket);
+        festival_ticket = findViewById(R.id.festival_ticket);
+        short_desc_ticket = findViewById(R.id.short_desc_ticket);
 
         //mengambil data dari intent
         Bundle bundle = getIntent().getExtras();
@@ -62,7 +60,7 @@ public class TicketDetailAct extends AppCompatActivity {
                 wifi_ticket.setText(dataSnapshot.child("is_wifi").getValue().toString());
                 festival_ticket.setText(dataSnapshot.child("is_festival").getValue().toString());
                 short_desc_ticket.setText(dataSnapshot.child("short_desc").getValue().toString());
-                Picasso.with(TicketDetailAct.this).load(dataSnapshot.child("url_thumbnail").getValue().toString()).centerCrop().fit().into(header_ticket_detail);
+                Picasso.get().load(dataSnapshot.child("url_thumbnail").getValue().toString()).centerCrop().fit().into(header_ticket_detail);
             }
 
             @Override
@@ -82,7 +80,7 @@ public class TicketDetailAct extends AppCompatActivity {
         btn_buy_ticket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotocheckout = new Intent (TicketDetailAct.this,TicketCheckoutAct.class);
+                Intent gotocheckout = new Intent(TicketDetailAct.this, TicketCheckoutAct.class);
                 //meletakkan data kepada intent
                 gotocheckout.putExtra("jenis_tiket", jenis_tiket_baru);
                 startActivity(gotocheckout);
