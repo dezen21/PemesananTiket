@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mregular"
-            android:text="Ticket Details"
+            android:text="@string/ticket_details"
             android:textColor="@color/blackPrimary"
             android:textSize="20sp" />
 
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mlight"
-            android:text="Check the amount of tickets"
+            android:text="@string/check_the_amount_of_tickets"
             android:textColor="@color/grayPrimary"
             android:textSize="16sp" />
 
@@ -177,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mregular"
-            android:text="Pricing"
+            android:text="@string/pricing"
             android:textColor="@color/blackPrimary"
             android:textSize="20sp" />
 
@@ -191,7 +191,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="Your current balance is"
+                android:text="@string/your_current_balance_is"
                 android:textColor="@color/grayPrimary"
                 android:textSize="16sp" />
 
@@ -225,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="Total Price"
+                android:text="@string/total_price"
                 android:textColor="@color/grayPrimary"
                 android:textSize="16sp" />
 
@@ -293,7 +293,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_btn_green_primary"
                 android:fontFamily="@font/mmedium"
-                android:text="PAY NOW"
+                android:text="@string/pay_now"
                 android:textColor="#FFF"
                 android:textSize="20sp"/>
 

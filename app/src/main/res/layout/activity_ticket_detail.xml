@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mregular"
-            android:text="Information"
+            android:text="@string/information"
             android:textColor="@color/blackPrimary"
             android:textSize="20sp" />
 
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mlight"
-            android:text="Knowing before travel"
+            android:text="@string/knowing_before_travel"
             android:textColor="@color/grayPrimary"
             android:textSize="16sp" />
 
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Tripod everywhere"
+                    android:text="@string/tripod_everywhere"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp" />
 
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Connect for any tourist"
+                    android:text="@string/connect_for_any_tourist"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp" />
 
@@ -196,7 +196,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Dance and Foods"
+                    android:text="@string/dance_and_foods"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp" />
 
@@ -260,7 +260,7 @@
             <Button
                 android:id="@+id/btn_buy_ticket"
                 style="@style/btn_blue_primary"
-                android:text="BUY TICKET" />
+                android:text="@string/buy_ticket" />
 
         </LinearLayout>
 
