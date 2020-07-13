@@ -51,7 +51,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/mlight"
                 android:lineSpacingExtra="9dp"
-                android:text="We highly suggest you to \nuse the correct informations"
+                android:text="@string/we_highly_suggest_you_to_nuse_the_correct_informations"
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="20sp"

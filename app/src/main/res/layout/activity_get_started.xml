@@ -10,14 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/appbg_getstarted"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:layout_width="match_parent"
@@ -77,7 +75,7 @@
         android:layout_marginEnd="48dp"
         android:background="@drawable/bg_btn_white_primary"
         android:fontFamily="sans-serif-medium"
-        android:text="NEW ACCOUNT"
+        android:text="@string/new_account"
         android:textColor="#B9B9B9"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

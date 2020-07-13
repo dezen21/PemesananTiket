@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/app_tittle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mregular"
+        android:layout_marginTop="100dp"
+        android:text="Anggota Kelompok"
+        android:textAlignment="center"
+        android:textColor="@color/blackPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Nama \n Muhammad Allen Dezen A \nNIM 17104011"
+        app:layout_constraintTop_toBottomOf="@+id/app_tittle2"
+        tools:layout_editor_absoluteX="120dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:gravity="center"
+        android:text="Nama \n Dery Sudrajat \nNIM 17104005"
+        app:layout_constraintTop_toBottomOf="@+id/app_tittle2"
+        tools:layout_editor_absoluteX="160dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:gravity="center"
+        android:text="Nama \n Wildan Eri Saputra  \nNIM 17104017"
+        app:layout_constraintTop_toBottomOf="@+id/app_tittle2"
+        tools:layout_editor_absoluteX="143dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="344dp"
+        android:gravity="center"
+        android:text="Nama \n Riski Maulana \nNIM 17104015"
+        app:layout_constraintTop_toBottomOf="@+id/app_tittle2"
+        tools:layout_editor_absoluteX="158dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

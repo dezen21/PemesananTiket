@@ -114,13 +114,13 @@
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mregular"
-                        android:text="Date"
-                        android:textColor="@color/blackPrimary"
-                        android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:text="@string/date"
+                android:textColor="@color/blackPrimary"
+                android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/xdate_wisata"
@@ -139,13 +139,13 @@
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mregular"
-                        android:text="Time"
-                        android:textColor="@color/blackPrimary"
-                        android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:text="@string/time"
+                android:textColor="@color/blackPrimary"
+                android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/xtime_wisata"
@@ -164,13 +164,13 @@
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mregular"
-                        android:text="Information"
-                        android:textColor="@color/blackPrimary"
-                        android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:text="@string/information"
+                android:textColor="@color/blackPrimary"
+                android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/xketentuan"
@@ -232,7 +232,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_btn_green_primary"
                     android:fontFamily="@font/mmedium"
-                    android:text="REFUND NOW"
+                    android:text="@string/refund_now"
                     android:textColor="#FFF"
                     android:textSize="20sp" />
 

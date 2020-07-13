@@ -37,7 +37,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/mlight"
         android:lineSpacingExtra="9dp"
-        android:text="Let the world knows yourself \nmore better and ever"
+        android:text="@string/let_the_world_knows_yourself_nmore_better_and_ever"
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="20sp"
