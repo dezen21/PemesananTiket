@@ -1,4 +1,4 @@
-package com.example.pemesanantiket;
+package com.example.pemesanantiket.model;
 
 public class MyTicket {
     String nama_wisata, lokasi;

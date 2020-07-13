@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient_primary_blue"
-    tools:context=".SignInAct">
+    tools:context=".ui.SignInAct">
 
     <ImageView
         android:id="@+id/imageView3"

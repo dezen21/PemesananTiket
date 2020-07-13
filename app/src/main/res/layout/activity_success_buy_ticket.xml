@@ -4,78 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterOneAct"
+    tools:context=".ui.RegisterOneAct"
     android:background="@color/bgPrimary">
 
-    <ImageView
-        android:id="@+id/icon_success_ticket"
-        android:layout_width="256dp"
-        android:layout_height="297dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/icon_success_ticket"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/app_tittle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/mregular"
-        android:text="Selamat Menikmati"
-        android:textAlignment="center"
-        android:textColor="@color/blackPrimary"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_success_ticket" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/app_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/mlight"
-        android:lineSpacingExtra="9dp"
-        android:text="Anda berhasil membeli tiket \ndan selamat berlibur"
-        android:textAlignment="center"
-        android:textColor="@color/grayPrimary"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_tittle" />
+            <ImageView
+                android:id="@+id/icon_success_ticket"
+                android:layout_width="256dp"
+                android:layout_height="297dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/icon_success_ticket"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/app_tittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/mregular"
+                android:text="Selamat Menikmati"
+                android:textAlignment="center"
+                android:textColor="@color/blackPrimary"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon_success_ticket" />
+
+            <TextView
+                android:id="@+id/app_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mlight"
+                android:lineSpacingExtra="9dp"
+                android:text="Anda berhasil membeli tiket \ndan selamat berlibur"
+                android:textAlignment="center"
+                android:textColor="@color/grayPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/app_tittle" />
 
     <Button
         android:id="@+id/btn_view_ticket"
         android:layout_marginStart="48dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="48dp"
-        android:text="View Ticket"
+        android:text="@string/view_ticket"
         style="@style/btn_blue_primary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_subtitle" />
 
-    <Button
-        android:id="@+id/button_my_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/bg_btn_white_primary"
-        android:fontFamily="sans-serif-medium"
-        android:text="MY DASHBOARD"
-        android:textColor="#B9B9B9"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_ticket" />
+            <Button
+                android:id="@+id/button_my_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_btn_white_primary"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/my_dashboard"
+                android:textColor="#B9B9B9"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_view_ticket" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

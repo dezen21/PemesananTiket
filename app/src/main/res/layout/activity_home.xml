@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterOneAct"
+    tools:context=".ui.RegisterOneAct"
     android:background="@color/bgPrimary">
 
     <ScrollView
@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mregular"
-                    android:text="Main Menus"
+                    android:text="@string/main_menus"
                     android:textColor="@color/blackPrimary"
                     android:textSize="20sp" />
 
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Explore the beauty of world"
+                    android:text="@string/explore_the_beauty_of_world"
                     android:textColor="@color/grayPrimary"
                     android:textSize="16sp" />
 
@@ -322,7 +322,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/mregular"
-                android:text="TicketTips"
+                android:text="@string/tickettips"
                 android:textColor="@color/blackPrimary"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -335,7 +335,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="Learn it for many benefits"
+                android:text="@string/learn_it_for_many_benefits"
                 android:textColor="@color/grayPrimary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"

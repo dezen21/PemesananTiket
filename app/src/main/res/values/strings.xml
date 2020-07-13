@@ -10,5 +10,38 @@
     <string name="bio_label">Your Passion</string>
     <string name="explore">EXPLORE NOW</string>
     <string name="loading_state">Loading...</string>
+    <string name="no_photo_url"><![CDATA[https://firebasestorage.googleapis.com/v0/b/fir-androidstudio-6b040.appspot.com/o/res%2Ficon_nopic.png?alt=media&token=74230a1c-0ce1-455c-8b5e-9ad083708842]]></string>
+    <string name="we_highly_suggest_you_to_nuse_the_correct_informations">We highly suggest you to \nuse the correct informations</string>
+    <string name="new_account">NEW ACCOUNT</string>
+    <string name="main_menus">Main Menus</string>
+    <string name="explore_the_beauty_of_world">Explore the beauty of world</string>
+    <string name="tickettips">TicketTips</string>
+    <string name="learn_it_for_many_benefits">Learn it for many benefits</string>
+    <string name="my_tickets">My Tickets</string>
+
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string name="refund_now">REFUND NOW</string>
+    <string name="create_ner_account">Create Ner Account</string>
+    <string name="please_fill_up_the_forms_below_nfor_informations">Please fill up the forms below \nfor informations</string>
+
+    <string name="let_the_world_knows_yourself_nmore_better_and_ever">Let the world knows yourself \nmore better and ever</string>
+    <string name="view_ticket">View Ticket</string>
+    <string name="my_dashboard">MY DASHBOARD</string>
+    <string name="ticket_details">Ticket Details</string>
+    <string name="check_the_amount_of_tickets">Check the amount of tickets</string>
+    <string name="pricing">Pricing</string>
+    <string name="your_current_balance_is">Your current balance is</string>
+    <string name="total_price">Total Price</string>
+    <string name="pay_now">PAY NOW</string>
+    <string name="information">Information</string>
+    <string name="knowing_before_travel">Knowing before travel</string>
+    <string name="tripod_everywhere">Tripod everywhere</string>
+    <string name="connect_for_any_tourist">Connect for any tourist</string>
+    <string name="dance_and_foods">Dance and Foods</string>
+    <string name="buy_ticket">BUY TICKET</string>
 
 </resources>
