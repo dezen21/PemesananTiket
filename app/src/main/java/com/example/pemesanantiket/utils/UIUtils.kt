@@ -59,6 +59,7 @@ fun generateBarcode(
 fun getImageUri(context: Context, inImage: Bitmap): String {
     val bytes = ByteArrayOutputStream()
     inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-    val path = MediaStore.Images.Media.insertImage(context.contentResolver, inImage, "Title", null)
+    val path = MediaStore.Images.Media
+            .insertImage(context.contentResolver, inImage, "Title", null)
     return Uri.parse(path).toString()
 }
