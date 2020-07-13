@@ -72,10 +72,11 @@ public class MyProfileAct extends AppCompatActivity {
 
         initView();
 
-        btn_about.setOnClickListener(v -> );{
+        btn_about.setOnClickListener(v -> {
             Intent gotoabout = new Intent(MyProfileAct.this,About.class);
             startActivity(gotoabout);
-        }
+        });
+
         btn_edit_profile.setOnClickListener(v -> {
             Intent gotoeditprofile = new Intent (MyProfileAct.this,EditProfileAct.class);
             startActivity(gotoeditprofile);
