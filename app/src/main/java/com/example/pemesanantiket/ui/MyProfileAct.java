@@ -36,7 +36,7 @@ public class MyProfileAct extends AppCompatActivity {
 
     private static final String TAG = "MyProfileAct";
     LinearLayout item_my_ticket;
-    Button btn_edit_profile, btn_back_home, btn_sign_out;
+    Button btn_edit_profile, btn_back_home, btn_sign_out,btn_about;
     TextView nama_lengkap, bio;
     ImageView photo_profile;
 
@@ -60,6 +60,7 @@ public class MyProfileAct extends AppCompatActivity {
         btn_edit_profile = findViewById(R.id.btn_edit_profile);
         btn_back_home = findViewById(R.id.btn_back_home);
         btn_sign_out = findViewById(R.id.btn_sign_out);
+        btn_about = findViewById(R.id.btn_about);
 
         nama_lengkap = findViewById(R.id.nama_lengkap);
         bio = findViewById(R.id.bio);
@@ -71,6 +72,10 @@ public class MyProfileAct extends AppCompatActivity {
 
         initView();
 
+        btn_about.setOnClickListener(v -> );{
+            Intent gotoabout = new Intent(MyProfileAct.this,About.class);
+            startActivity(gotoabout);
+        }
         btn_edit_profile.setOnClickListener(v -> {
             Intent gotoeditprofile = new Intent (MyProfileAct.this,EditProfileAct.class);
             startActivity(gotoeditprofile);

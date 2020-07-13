@@ -155,6 +155,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
             <Button
+                android:id="@+id/btn_about"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_btn_green_primary"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#FFF"
+                android:text="About"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
+
+            <Button
                 android:id="@+id/btn_sign_out"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -169,7 +186,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_about" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
