@@ -17,11 +17,6 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btn_back.setOnClickListener(v -> finish());
     }
 }

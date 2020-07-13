@@ -45,4 +45,6 @@
     <string name="connect_for_any_tourist">Terhubung untuk setiap <turis></turis></string>
     <string name="dance_and_foods">Tari dan Makanan</string>
     <string name="buy_ticket">Beli Tiket</string>
+    <string name="about">Tentang</string>
+    <string name="change_language">Ganti Bahasa</string>
 </resources>

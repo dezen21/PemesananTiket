@@ -185,8 +185,10 @@
 
                 <ImageView
                     android:id="@+id/ivBarcode"
-                    android:layout_width="222dp"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
                     android:layout_height="52dp"
+                    android:foreground="@color/colorPrimary"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp" />

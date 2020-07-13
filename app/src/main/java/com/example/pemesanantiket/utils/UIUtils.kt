@@ -47,7 +47,7 @@ fun generateBarcode(
     val multiFormatWriter = MultiFormatWriter();
     try {
         val bitMatrix = multiFormatWriter
-                .encode(code, BarcodeFormat.CODE_128, 222,52)
+                .encode(code, BarcodeFormat.CODE_128, 350,52)
         val barcodeEncoder = BarcodeEncoder()
         val bitmap = barcodeEncoder.createBitmap(bitMatrix)
         callback(getImageUri(context!!, bitmap))

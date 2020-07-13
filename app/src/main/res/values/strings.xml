@@ -43,5 +43,7 @@
     <string name="connect_for_any_tourist">Connect for any tourist</string>
     <string name="dance_and_foods">Dance and Foods</string>
     <string name="buy_ticket">BUY TICKET</string>
+    <string name="about">About</string>
+    <string name="change_language">Change Language</string>
 
 </resources>

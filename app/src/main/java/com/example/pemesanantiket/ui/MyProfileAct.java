@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -36,7 +37,7 @@ public class MyProfileAct extends AppCompatActivity {
 
     private static final String TAG = "MyProfileAct";
     LinearLayout item_my_ticket;
-    Button btn_edit_profile, btn_back_home, btn_sign_out,btn_about;
+    Button btn_edit_profile, btn_back_home, btn_sign_out,btn_about, btnChangeLang;
     TextView nama_lengkap, bio;
     ImageView photo_profile;
 
@@ -61,6 +62,7 @@ public class MyProfileAct extends AppCompatActivity {
         btn_back_home = findViewById(R.id.btn_back_home);
         btn_sign_out = findViewById(R.id.btn_sign_out);
         btn_about = findViewById(R.id.btn_about);
+        btnChangeLang = findViewById(R.id.btnChangeLang);
 
         nama_lengkap = findViewById(R.id.nama_lengkap);
         bio = findViewById(R.id.bio);
@@ -76,6 +78,10 @@ public class MyProfileAct extends AppCompatActivity {
             Intent gotoabout = new Intent(MyProfileAct.this,About.class);
             startActivity(gotoabout);
         });
+
+        btnChangeLang.setOnClickListener(v -> startActivity(
+                new Intent(Settings.ACTION_LOCALE_SETTINGS)
+        ));
 
         btn_edit_profile.setOnClickListener(v -> {
             Intent gotoeditprofile = new Intent (MyProfileAct.this,EditProfileAct.class);

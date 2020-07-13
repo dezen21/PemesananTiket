@@ -161,15 +161,30 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_btn_green_primary"
+                android:background="@drawable/bg_btn_white_primary"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="#FFF"
-                android:text="About"
+                android:textColor="#B9B9B9"
+                android:text="@string/about"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
+
+            <Button
+                android:id="@+id/btnChangeLang"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_btn_white_primary"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/change_language"
+                android:textColor="#B9B9B9"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_about" />
 
             <Button
                 android:id="@+id/btn_sign_out"
@@ -178,15 +193,17 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/bg_btn_white_primary"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/sign_out"
                 android:textColor="#B9B9B9"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_about" />
+                app:layout_constraintTop_toBottomOf="@+id/btnChangeLang" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
