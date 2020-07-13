@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.pemesanantiket.R;
 import com.example.pemesanantiket.model.MyTicket;
+import com.example.pemesanantiket.model.Ticket;
 import com.example.pemesanantiket.ui.MyTicketDetailAct;
 
 import androidx.annotation.NonNull;
@@ -19,9 +20,9 @@ import java.util.ArrayList;
 public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHolder>{
 
     Context context;
-    ArrayList<MyTicket> myTicket;
+    ArrayList<Ticket> myTicket;
 
-    public TicketAdapter(Context c, ArrayList<MyTicket> p){
+    public TicketAdapter(Context c, ArrayList<Ticket> p){
         context = c;
         myTicket = p;
     }
@@ -33,17 +34,18 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        myViewHolder.xnama_wisata.setText(myTicket.get(i).getNama_wisata());
-        myViewHolder.xlokasi.setText(myTicket.get(i).getLokasi());
-        myViewHolder.xjumlah_tiket.setText(myTicket.get(i).getJumlah_tiket() + " Tickets");
+        Ticket ticket = myTicket.get(i);
+        myViewHolder.xnama_wisata.setText(ticket.getName());
+        myViewHolder.xlokasi.setText(ticket.getLocation());
+        myViewHolder.xjumlah_tiket.setText(ticket.getNumTicket() + " Tickets");
 
-        final String getNamaWisata = myTicket.get(i).getNama_wisata();
+        final String idTicket = ticket.getIdTicket();
 
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent gotomyticketdetail = new Intent(context, MyTicketDetailAct.class);
-                gotomyticketdetail.putExtra("nama_wisata", getNamaWisata);
+                gotomyticketdetail.putExtra(MyTicketDetailAct.ID_TICKET_EXTRA, idTicket);
                 context.startActivity(gotomyticketdetail);
             }
         });
@@ -53,6 +55,12 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
     public int getItemCount() {
 
         return myTicket.size();
+    }
+
+    public void clear() {
+        int size = myTicket.size();
+        myTicket.clear();
+        notifyItemRangeRemoved(0, size);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{

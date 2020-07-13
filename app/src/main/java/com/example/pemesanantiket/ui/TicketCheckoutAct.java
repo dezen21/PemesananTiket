@@ -11,6 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.pemesanantiket.R;
+import com.example.pemesanantiket.model.Ticket;
+import com.example.pemesanantiket.model.User;
+import com.example.pemesanantiket.model.Wisata;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -87,7 +90,8 @@ public class TicketCheckoutAct extends AppCompatActivity {
         reference2.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                mybalance = Integer.valueOf(dataSnapshot.child("user_balance").getValue().toString());
+                User user = dataSnapshot.getValue(User.class);
+                mybalance = user.getBalance();
                 textmybalance.setText("US$" + mybalance + "");
             }
 
@@ -102,19 +106,8 @@ public class TicketCheckoutAct extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //menimpa data yang ada dengan data yang baru
-                namawisata.setText(dataSnapshot.child("nama_wisata").getValue().toString());
-                lokasi.setText(dataSnapshot.child("lokasi").getValue().toString());
-                ketentuan.setText(dataSnapshot.child("ketentuan").getValue().toString());
-
-                date_wisata = dataSnapshot.child("date_wisata").getValue().toString();
-                time_wisata = dataSnapshot.child("ketentuan").getValue().toString();
-
-                valuehargatiket = Integer.valueOf(dataSnapshot.child("harga_tiket").getValue().toString());
-
-                valuetotalharga = valuehargatiket * valuejumlahtiket;
-                texttotalharga.setText("US$ " + valuetotalharga + "");
-
+                Wisata wisata = dataSnapshot.getValue(Wisata.class);
+                loadDataWisata(wisata);
             }
 
             @Override
@@ -169,14 +162,17 @@ public class TicketCheckoutAct extends AppCompatActivity {
             reference3.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    reference3.getRef().child("id_ticWket").setValue(namawisata.getText().toString() + nomor_transaksi);
-                    reference3.getRef().child("nama_wisata").setValue(namawisata.getText().toString());
-                    reference3.getRef().child("lokasi").setValue(lokasi.getText().toString());
-                    reference3.getRef().child("ketentuan").setValue(ketentuan.getText().toString());
-                    reference3.getRef().child("jumlah_tiket").setValue(valuejumlahtiket.toString());
-                    reference3.getRef().child("date_wisata").setValue(date_wisata);
-                    reference3.getRef().child("time_wisata").setValue(time_wisata);
-
+                    Ticket ticket = new Ticket(
+                            namawisata.getText().toString() + nomor_transaksi,
+                            namawisata.getText().toString(),
+                            valuejumlahtiket.toString(),
+                            ketentuan.getText().toString(),
+                            lokasi.getText().toString(),
+                            date_wisata,
+                            time_wisata,
+                            valuetotalharga
+                    );
+                    reference3.getRef().setValue(ticket);
                     Intent gotosuccessticket = new Intent(TicketCheckoutAct.this, SuccessBuyTicketAct.class);
                     startActivity(gotosuccessticket);
                 }
@@ -192,8 +188,10 @@ public class TicketCheckoutAct extends AppCompatActivity {
             reference4.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    User user = dataSnapshot.getValue(User.class);
                     sisa_balance = mybalance - valuetotalharga;
-                    reference4.getRef().child("user_balance").setValue(sisa_balance);
+                    user.setBalance(sisa_balance);
+                    reference4.getRef().setValue(user);
                 }
 
                 @Override
@@ -204,6 +202,21 @@ public class TicketCheckoutAct extends AppCompatActivity {
         });
 
         btn_back.setOnClickListener(v -> finish());
+    }
+
+    private void loadDataWisata(Wisata wisata) {
+        //menimpa data yang ada dengan data yang baru
+        namawisata.setText(wisata.getName());
+        lokasi.setText(wisata.getLocation());
+        ketentuan.setText(wisata.getRequirement());
+
+        date_wisata = wisata.getDateWisata();
+        time_wisata = wisata.getTime();
+
+        valuehargatiket = Integer.valueOf(wisata.getPrice());
+
+        valuetotalharga = valuehargatiket * valuejumlahtiket;
+        texttotalharga.setText("US$ " + valuetotalharga + "");
     }
 
     public void getUsernameLocal() {

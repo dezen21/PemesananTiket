@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.pemesanantiket.R;
+import com.example.pemesanantiket.model.Wisata;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,14 +54,8 @@ public class TicketDetailAct extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //menimpa data yang ada dengan data yang baru
-                title_ticket.setText(dataSnapshot.child("nama_wisata").getValue().toString());
-                location_ticket.setText(dataSnapshot.child("lokasi").getValue().toString());
-                photo_spot_ticket.setText(dataSnapshot.child("is_photo_spot").getValue().toString());
-                wifi_ticket.setText(dataSnapshot.child("is_wifi").getValue().toString());
-                festival_ticket.setText(dataSnapshot.child("is_festival").getValue().toString());
-                short_desc_ticket.setText(dataSnapshot.child("short_desc").getValue().toString());
-                Picasso.get().load(dataSnapshot.child("url_thumbnail").getValue().toString()).centerCrop().fit().into(header_ticket_detail);
+                Wisata wisata = dataSnapshot.getValue(Wisata.class);
+                loadDataTicket(wisata);
             }
 
             @Override
@@ -86,5 +81,15 @@ public class TicketDetailAct extends AppCompatActivity {
                 startActivity(gotocheckout);
             }
         });
+    }
+
+    private void loadDataTicket(Wisata wisata) {
+        title_ticket.setText(wisata.getName());
+        location_ticket.setText(wisata.getLocation());
+        photo_spot_ticket.setText(wisata.getNumPhotoSpot());
+        wifi_ticket.setText(wisata.getWifi());
+        festival_ticket.setText(wisata.getNumFest());
+        short_desc_ticket.setText(wisata.getDesc());
+        Picasso.get().load(wisata.getUrlPhoto()).centerCrop().fit().into(header_ticket_detail);
     }
 }
