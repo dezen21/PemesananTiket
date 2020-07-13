@@ -118,7 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mregular"
-                        android:text="Date"
+                        android:text="@string/date"
                         android:textColor="@color/blackPrimary"
                         android:textSize="20sp" />
 
@@ -143,7 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mregular"
-                        android:text="Time"
+                        android:text="@string/time"
                         android:textColor="@color/blackPrimary"
                         android:textSize="20sp" />
 
@@ -168,7 +168,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mregular"
-                        android:text="Information"
+                        android:text="@string/information"
                         android:textColor="@color/blackPrimary"
                         android:textSize="20sp" />
 
@@ -184,12 +184,12 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/ivBarcode"
                     android:layout_width="222dp"
                     android:layout_height="52dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:src="@drawable/ic_barcode" />
+                    android:layout_marginBottom="16dp" />
 
 
             </LinearLayout>
@@ -232,7 +232,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_btn_green_primary"
                     android:fontFamily="@font/mmedium"
-                    android:text="REFUND NOW"
+                    android:text="@string/refund_now"
                     android:textColor="#FFF"
                     android:textSize="20sp" />
 

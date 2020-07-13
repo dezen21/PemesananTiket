@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pemesanan tiket</string>
+    <string name="slogan">Wisata Jadi Lebih Asyik!</string>
+    <string name="getstarted">Temukan \nKeindahan \nBumi</string>
+    <string name="signin">Masuk</string>
+    <string name="username_label">Nama User</string>
+    <string name="password_label">Kata Sandi</string>
+    <string name="email_label">Alamat Email</string>
+    <string name="name_label">Nama</string>
+    <string name="bio_label">Hobi Anda</string>
+    <string name="explore">Jelajah Sekarang</string>
+    <string name="loading_state">Memproses...</string>
+    <string name="no_photo_url"><![CDATA[https://firebasestorage.googleapis.com/v0/b/fir-androidstudio-6b040.appspot.com/o/res%2Ficon_nopic.png?alt=media&token=74230a1c-0ce1-455c-8b5e-9ad083708842]]></string>
+
+    <string name="we_highly_suggest_you_to_nuse_the_correct_informations">Kami sangat menyarankan Anda untuk \nmenggunakan informasi yang benar</string>
+    <string name="new_account">Akun Baru</string>
+    <string name="main_menus">Menu Utama</string>
+    <string name="explore_the_beauty_of_world">Jelajahi Keindahan Dunia</string>
+    <string name="tickettips">Petunjuk Tiket</string>
+    <string name="learn_it_for_many_benefits">Pelajari untuk banyak manfaat</string>
+    <string name="my_tickets">TiketSaya</string>
+
+    <string name="edit_profile">Ubah Profil</string>
+    <string name="sign_out">Keluar</string>
+    <string name="date">Tanggal</string>
+    <string name="time">Waktu</string>
+    <string name="information">Informasi</string>
+    <string name="refund_now">Kembalikan</string>
+    <string name="create_ner_account">Membuat akun baru</string>
+    <string name="please_fill_up_the_forms_below_nfor_informations">Silakan isi formulir di bawah ini\nuntuk informasi</string>
+
+    <string name="let_the_world_knows_yourself_nmore_better_and_ever">Biarkan dunia mengenal diri Anda \nlebih baik dan lebih lama</string>
+    <string name="view_ticket">Lihat Tiket</string>
+    <string name="my_dashboard">Dashboard saya</string>
+    <string name="ticket_details">Detail Tiket</string>
+    <string name="check_the_amount_of_tickets">Periksa jumlah tiket</string>
+    <string name="pricing">Harga</string>
+    <string name="your_current_balance_is">Saldo Anda</string>
+    <string name="total_price">Total Harga</string>
+    <string name="pay_now">Bayar Sekarang</string>
+
+    <string name="knowing_before_travel">Tips sebelum bepergian</string>
+    <string name="tripod_everywhere">Tripod Dimana saja</string>
+    <string name="connect_for_any_tourist">Terhubung untuk setiap <turis></turis></string>
+    <string name="dance_and_foods">Tari dan Makanan</string>
+    <string name="buy_ticket">Beli Tiket</string>
+</resources>

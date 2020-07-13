@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,7 @@ public class MyTicketDetailAct extends AppCompatActivity {
 
     LinearLayout btn_back;
     TextView xnama_wisata, xlokasi, xtime_wisata, xdate_wisata, xketentuan;
+    ImageView ivBarcode;
     private Button btnRefund;
     private Ticket ticket;
     private String idWisata;
@@ -47,6 +50,7 @@ public class MyTicketDetailAct extends AppCompatActivity {
         xdate_wisata = findViewById(R.id.xdate_wisata);
         xketentuan = findViewById(R.id.xketentuan);
         btnRefund = findViewById(R.id.btnRefund);
+        ivBarcode = findViewById(R.id.ivBarcode);
         reference = FirebaseDatabase.getInstance().getReference();
 
         getUsernameLocal();
@@ -122,6 +126,11 @@ public class MyTicketDetailAct extends AppCompatActivity {
         xtime_wisata.setText(wisata.getTime());
         xdate_wisata.setText(wisata.getDate());
         xketentuan.setText(wisata.getRequirement());
+
+        UIUtilsKt.generateBarcode(this, wisata.getIdTicket(), imgUri -> {
+            Picasso.get().load(imgUri).into(ivBarcode);
+            return null;
+        });
     }
 
     public void getUsernameLocal() {
