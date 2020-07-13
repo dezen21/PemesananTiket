@@ -5,12 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".RegisterOneAct">
+    tools:context=".ui.RegisterOneAct">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -327,7 +331,7 @@
                     <Button
                         android:id="@+id/btn_save"
                         style="@style/btn_blue_primary"
-                        android:text="SAVE PROFILE"/>
+                        android:text="SAVE PROFILE" />
 
 
                 </LinearLayout>

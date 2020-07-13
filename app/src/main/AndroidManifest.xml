@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditProfileAct"></activity>
-        <activity android:name=".MyTicketDetailAct" />
-        <activity android:name=".SuccessBuyTicketAct" />
-        <activity android:name=".TicketCheckoutAct" />
-        <activity android:name=".TicketDetailAct" />
-        <activity android:name=".HomeAct" />
-        <activity android:name=".MyProfileAct" />
-        <activity android:name=".SuccessRegisterAct" />
-        <activity android:name=".RegisterTwoAct" />
-        <activity android:name=".RegisterOneAct" />
-        <activity android:name=".SignInAct" />
-        <activity android:name=".GetStarted" />
-        <activity android:name=".SplashAct">
+        <activity android:name=".ui.EditProfileAct"></activity>
+        <activity android:name=".ui.MyTicketDetailAct" />
+        <activity android:name=".ui.SuccessBuyTicketAct" />
+        <activity android:name=".ui.TicketCheckoutAct" />
+        <activity android:name=".ui.TicketDetailAct" />
+        <activity android:name=".ui.HomeAct" />
+        <activity android:name=".ui.MyProfileAct" />
+        <activity android:name=".ui.SuccessRegisterAct" />
+        <activity android:name=".ui.RegisterTwoAct" />
+        <activity android:name=".ui.RegisterOneAct" />
+        <activity android:name=".ui.SignInAct" />
+        <activity android:name=".ui.GetStarted" />
+        <activity android:name=".ui.SplashAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
