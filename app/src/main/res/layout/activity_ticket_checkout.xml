@@ -61,22 +61,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mregular"
-                    android:text="Ticket Details"
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="@string/ticket_details"
+            android:textColor="@color/blackPrimary"
+            android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="Check the amount of tickets"
-                    android:textColor="@color/grayPrimary"
-                    android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mlight"
+            android:text="@string/check_the_amount_of_tickets"
+            android:textColor="@color/grayPrimary"
+            android:textSize="16sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -185,27 +185,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mregular"
-                    android:text="Pricing"
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="@string/pricing"
+            android:textColor="@color/blackPrimary"
+            android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/mlight"
-                        android:text="Your current balance is"
-                        android:textColor="@color/grayPrimary"
-                        android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mlight"
+                android:text="@string/your_current_balance_is"
+                android:textColor="@color/grayPrimary"
+                android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textmybalance"
@@ -232,14 +232,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/mlight"
-                        android:text="Total Price"
-                        android:textColor="@color/grayPrimary"
-                        android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mlight"
+                android:text="@string/total_price"
+                android:textColor="@color/grayPrimary"
+                android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/texttotalharga"
@@ -301,15 +301,15 @@
                     android:layout_weight="3"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/btn_buy_ticket"
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_btn_green_primary"
-                        android:fontFamily="@font/mmedium"
-                        android:text="PAY NOW"
-                        android:textColor="#FFF"
-                        android:textSize="20sp" />
+            <Button
+                android:id="@+id/btn_buy_ticket"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_btn_green_primary"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/pay_now"
+                android:textColor="#FFF"
+                android:textSize="20sp"/>
 
                 </LinearLayout>
 

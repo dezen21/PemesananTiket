@@ -74,22 +74,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/location_ticket">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mregular"
-                    android:text="Information"
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="@string/information"
+            android:textColor="@color/blackPrimary"
+            android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="Knowing before travel"
-                    android:textColor="@color/grayPrimary"
-                    android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mlight"
+            android:text="@string/knowing_before_travel"
+            android:textColor="@color/grayPrimary"
+            android:textSize="16sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -124,14 +124,14 @@
                             android:textColor="@color/blackPrimary"
                             android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mlight"
-                            android:text="Tripod everywhere"
-                            android:textColor="@color/grayPrimary"
-                            android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mlight"
+                    android:text="@string/tripod_everywhere"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="12sp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -162,14 +162,14 @@
                             android:textColor="@color/blackPrimary"
                             android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mlight"
-                            android:text="Connect for any tourist"
-                            android:textColor="@color/grayPrimary"
-                            android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mlight"
+                    android:text="@string/connect_for_any_tourist"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="12sp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -200,14 +200,14 @@
                             android:textColor="@color/blackPrimary"
                             android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mlight"
-                            android:text="Dance and Foods"
-                            android:textColor="@color/grayPrimary"
-                            android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mlight"
+                    android:text="@string/dance_and_foods"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="12sp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -268,10 +268,10 @@
                     android:layout_weight="3"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/btn_buy_ticket"
-                        style="@style/btn_blue_primary"
-                        android:text="BUY TICKET" />
+            <Button
+                android:id="@+id/btn_buy_ticket"
+                style="@style/btn_blue_primary"
+                android:text="@string/buy_ticket" />
 
                 </LinearLayout>
 
