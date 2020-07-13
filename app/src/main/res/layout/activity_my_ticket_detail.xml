@@ -184,12 +184,12 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/ivBarcode"
                     android:layout_width="222dp"
                     android:layout_height="52dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:src="@drawable/ic_barcode" />
+                    android:layout_marginBottom="16dp" />
 
 
             </LinearLayout>
