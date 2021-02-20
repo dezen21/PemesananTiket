@@ -37,7 +37,7 @@ public class MyProfileAct extends AppCompatActivity {
 
     private static final String TAG = "MyProfileAct";
     LinearLayout item_my_ticket;
-    Button btn_edit_profile, btn_back_home, btn_sign_out,btn_about, btnChangeLang;
+    Button btn_edit_profile, btn_back_home, btn_sign_out,btnChangeLang;
     TextView nama_lengkap, bio;
     ImageView photo_profile;
 
@@ -61,7 +61,6 @@ public class MyProfileAct extends AppCompatActivity {
         btn_edit_profile = findViewById(R.id.btn_edit_profile);
         btn_back_home = findViewById(R.id.btn_back_home);
         btn_sign_out = findViewById(R.id.btn_sign_out);
-        btn_about = findViewById(R.id.btn_about);
         btnChangeLang = findViewById(R.id.btnChangeLang);
 
         nama_lengkap = findViewById(R.id.nama_lengkap);
@@ -74,10 +73,7 @@ public class MyProfileAct extends AppCompatActivity {
 
         initView();
 
-        btn_about.setOnClickListener(v -> {
-            Intent gotoabout = new Intent(MyProfileAct.this,About.class);
-            startActivity(gotoabout);
-        });
+
 
         btnChangeLang.setOnClickListener(v -> startActivity(
                 new Intent(Settings.ACTION_LOCALE_SETTINGS)
@@ -168,5 +164,4 @@ public class MyProfileAct extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
     }
-
 }
